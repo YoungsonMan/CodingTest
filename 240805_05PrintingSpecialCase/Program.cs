@@ -1,4 +1,4 @@
-﻿namespace _240805_05PrintingSpecialCase
+﻿namespace _240805_05_PrintingSpecialCase
 {
     internal class Program
     {/****************************************************************

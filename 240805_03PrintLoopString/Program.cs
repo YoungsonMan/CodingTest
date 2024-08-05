@@ -1,14 +1,18 @@
-﻿namespace _240805_03PrintLoopString
+﻿namespace _240805_03_PrintLoopString
 {
     internal class Program
     { /****************************************************************
       * 문자열 반복해서 출력하기
       * 문제설명:
       * 문자열 str 과 정수 n 이 주어집니다.
-      * str 이 n 번 반복된 문자열을 ㅁ나들어 출력하는 코드를 작성하기
+      * str 이 n 번 반복된 문자열을 만들어 출력하는 코드를 작성하기
       * 제한사항:
       *         1 <= str 의 길이 <= 10
       *         1 <= n <= 5 
+      * 입력 #1:
+      *         string 5
+      * 입력 #2:
+      *         stringstringstringstringstring
       ***************************************************************/
         static void Main(string[] args)
         {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.Design;
 
-namespace _240805_04ExchangeUpperAndLowerCase
+namespace _240805_04_ExchangeUpperAndLowerCase
 {/****************************************************************
  * 대소문자 바꿔서 출력하기
  * 문제설명:
@@ -14,7 +14,7 @@ namespace _240805_04ExchangeUpperAndLowerCase
  *          aBcDeFg
  * 출력 #1:
  *          AbCdEfG
- ***************************************************************/
+ *****************************************************************/
     internal class Program
     {
         static void Main(string[] args)
