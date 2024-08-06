@@ -23,7 +23,8 @@ Laguage used - C#
 [Programmers 웹사이트에 코딩 기초 트레이닝](https://school.programmers.co.kr/learn/challenges/training?order=acceptance_desc) 
 차근차근 시작해보세요
 프로그래머스가 준비한 일일 도전 과제 문제들을 매일 풀어 보세요! 우측 캘린더 메뉴에서 나의 일일 도전 과제 진행 현황을 확인할 수 있습니다.
-Day 1
+
+## Day 1
 * ### 문자열 출력하기 
 문자열 str이 주어질 때, str을 출력하는 코드를 작성해 보세요.
 
@@ -53,11 +54,69 @@ b = 5
 * ### 특수문자 출력하기  
 다음과 같이 출력하도록 코드를 작성해 주세요.(!@#$%^&*(\'"<>?:;)
 
+## Day2
+* ### 덧셈식 출력하기  
+두 정수 a, b가 주어질 때 다음과 같은 형태의 계산식을 출력하는 코드를 작성해 보세요..
+
+입력: 4 5  
+출력: 4 + 5 = 9
+
+* ### 문자열 붙여서 출력하기  
+두 개의 문자열 str1, str2가 공백으로 구분되어 입력으로 주어집니다.
+입출력 예와 같이 str1과 str2을 이어서 출력하는 코드를 작성해 보세요.
+
+입력: apple pen  
+출력: applepen   
+입력: Hello World!  
+출력: HelloWorld!
+
+
+* ### 문자열 돌리기  
+문자열 str이 주어집니다.
+문자열을 시계방향으로 90도 돌려서 아래 입출력 예와 같이 출력하는 코드를 작성해 보세요.
+
+입력: abcde  
+출력: 
+
+a
+
+b
+
+c
+
+d
+
+e
+
+
+* ### 홀짝 구분하기  
+자연수 n이 입력으로 주어졌을 때 만약 n이 짝수이면 "n is even"을, 홀수이면 "n is odd"를 출력하는 코드를 작성해 보세요.
+
+입력1: 100  
+출력1: 100 is even   
+입력2: 1  
+출력2: 1 is odd
+
+
+* ### 문자열 겹쳐쓰기  
+문자열 my_string, overwrite_string과 정수 s가 주어집니다. 문자열 my_string의 인덱스 s부터 overwrite_string의 길이만큼을 문자열 overwrite_string으로 바꾼 문자열을 return 하는 solution 함수를 작성해 주세요.
+
+입출력 예
+
+| my_string | overwrite_string | s | result |
+| --- | --- | --- | --- |
+| "He11oWor1d" | "lloWorl" | 2 | "HelloWorld" |
+| "Program29b8UYP" | "merS123" | 7 | "ProgrammerS123" |
+
+
 gif
 ---- 
 ![240805_Day1](https://github.com/user-attachments/assets/aaf77dc6-abe1-4eaa-8307-102d4df1f5ba)
 
 ![240805_Day1_VS](https://github.com/user-attachments/assets/eb5d1c9c-fe13-42da-aa96-3ec79c897103)
+
+![Day2](https://github.com/user-attachments/assets/89685d11-8993-4eb8-ab2e-0cde1f41c20c)
+
 
 # Progress
 
@@ -71,12 +130,18 @@ gif
     - [x]  문자열 반복해서 출력하기
     - [x]  대소문자 바꿔서 출력하기
     - [x]  특수문자 출력하기
-- [ ]  Day 2 출력, 연산
-    - [ ]  덧셈식 출력하기
-    - [ ]  문자열 붙여서 출력하기
-    - [ ]  문자열 돌리기
-    - [ ]  홀짝 구분하기
-    - [ ]  문자열 겹쳐쓰기
+- [x]  Day 2 출력, 연산
+    - [x]  덧셈식 출력하기
+    - [x]  문자열 붙여서 출력하기
+    - [x]  문자열 돌리기
+    - [x]  홀짝 구분하기
+    - [x]  문자열 겹쳐쓰기
+- [ ]  Day 3 연산
+    - [ ]  문자열 섞기
+    - [ ]  문자 리스트를 문자열로 변환하기
+    - [ ]  문자열 곱하기
+    - [ ]  더 크게 합치기
+    - [ ]  두 수의 연산값 비교하기
 
 
 ## Comments
@@ -84,3 +149,4 @@ gif
 ---
 
 Day 1 완료. 아직은 할만하다.
+Day 2 마지막문제(문자열 겹쳐쓰기)가 조금 햇갈렸다. "Substring" 
