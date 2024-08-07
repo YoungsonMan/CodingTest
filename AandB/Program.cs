@@ -1,6 +1,6 @@
-﻿namespace AandB
+﻿namespace _240805_02_AandB
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {

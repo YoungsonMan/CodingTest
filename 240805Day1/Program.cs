@@ -1,4 +1,4 @@
-﻿namespace _240805Day1
+﻿namespace _240805_01_Basic
 {
     /// <summary>
     /// 2024-08-05
