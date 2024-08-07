@@ -19,7 +19,7 @@
         ******************************************************************/
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+
             Solution solution = new Solution();
             Console.WriteLine(solution);
         }
@@ -28,16 +28,15 @@
     {
         public string solution(string my_string, string overwrite_string, int s)
         {
-            char[] caseCheck = my_string.ToCharArray();
-            for (int i = 0; i < caseCheck.Length; i++)
-            {
-                if (caseCheck[i] >= 'a' && caseCheck[i] <= 'z')
-                {
-                    my_string += char.ToUpper(caseCheck[i]);
-                }
-            }
-                string answer = "";
+            string subString = my_string.Substring(0, s);
+            string overString = my_string.Substring(s + overwrite_string.Length);
+
+            string answer = subString + overwrite_string + overString;
+            Console.WriteLine(answer);
+
             return answer;
+
+            
         }
     }
 }
