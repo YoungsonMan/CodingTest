@@ -30,6 +30,8 @@
             int b = 91;
             result.solution(a, b);
             Console.WriteLine(result.solution(a, b));
+            Console.WriteLine($"{a}{b}");
+
         }
     }
 
@@ -41,11 +43,35 @@
             int answer = 0;
             string str1 = a.ToString();
             string str2 = b.ToString();
-            string temp = str1 + str2;
-            answer = int.Parse(temp);
+            string temp1 = str1 + str2;
+            string temp2 = str2 + str1;
+            int choice1 = int.Parse(temp1);
+            int choice2 = int.Parse(temp2);
+            if (choice1 > choice2)
+            {
+                answer = choice1;
+            }
+            else
+            {
+                answer = choice2;
+            }
             return answer;
             // 위에 방식이 작동은 하는데 
             // 제출 채점에서 테스트 반정도 실패하면서 빠꾸먹음.
+            // 아 그게아니라 문제가 앞뒤더해서 더 큰거 내보내야되는거네 뒷부분이 더있었네
+            // 문제를 좀 끝까지 읽어야할 필요가 있는듯 싶다.
+            // 이게 문자열 더해서 더 큰거를 뽑아내야되는데 그냥 문자열만 합치면 되는줄 알고 
+            // 그것만 주구장창하는데 효율이 안좋아서 안되는줄 알았으니 
+            // 똥멍청이다.
         }
+
+        // 이런 방법으로 깔끔하고 간략하게 푼사람들도 있다. 참고하자
+        public int solutionFromOther(int a, int b)
+        {
+            int aNum = Int32.Parse($"{a}{b}");
+            int bNum = Int32.Parse($"{b}{a}");
+            return Math.Max(aNum, bNum);
+        }
+
     }
 }
