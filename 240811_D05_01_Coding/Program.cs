@@ -1,4 +1,6 @@
-﻿namespace _240811_D05_01_Coding
+﻿using System.Reflection.Metadata;
+
+namespace _240811_D05_01_Coding
 {   /// <summary>
     /// 2024-08-11
     /// 프로그래머스 :
@@ -45,7 +47,6 @@
     {
         public string solution(string code)
         {
-            string answer = "";
 
             // input string "code"
             // read "code" 
@@ -54,23 +55,12 @@
             // 반복
             // 문자열(string) ret 으로 출력
 
-            // switch문 써도 괜찮을거 같다.
-
-            int mode = 0;
-            string ret = "";
-            string retOdd = "";
-            string retEven = "";
-            char[] chars = code.ToCharArray();
-
+            
             // 1을 읽을때마다 mode 변경
             // mode 0 = 짝수 code[i]만 추가 
             // mode 1 = 홀수 code[i]만 추가
             //
-            // 굳이 mode 뭐 안만들어도
-            // if문 두개만들어서  홀수면 ___추가 / 짝수면 ___추가 하게 해서 하면 될거같은데
-            // 지금생각하니까
-            // while문으로 홀수일떄만 / 짝수일때만 하면될지도?
-
+ 
             // < step 1 >
             // 처음에는 0, 짝수만 받기
             // 하다가 ac => 1[3]받고 홀수모드(mode1)로 변경
@@ -80,19 +70,52 @@
             // a[0]c[2]  b[5]  a[8]c[10] 추가
 
 
+            
+            //char[] chars = code.ToCharArray();
 
-            for (int i = 0; i < chars.Length; i++)
+            string answer = "";
+            bool mode = true;
+
+
+            for (int i = 0; i < code.Length; i++)
             {
-                if (chars[i] % 2 == 0)
+                if (mode)
                 {
-                    retEven += chars[i];
+                    if (code[i] != '1')
+                    {
+                        if (i % 2 == 0)
+                        {
+                            answer += code[i];
+                        }
+                    }
+                    else if (code[i] == '1')
+                    {
+                        mode = false;
+                    }
                 }
-                else if (chars[i] % 2 != 0)
+                else
                 {
-                    retOdd += chars[i];
+                    if (code[i] != '1')
+                    {
+                        if (i % 2 != 0)
+                        {
+                            answer += code[i];
+                        }
+                    }
+                    else if (code[i] == '1')
+                    {
+                        mode = true;
+
+                }
                 }
             }
+            if (answer.Length == 0)
+            {
+                answer = "EMPTY";
+            }
+            
 
+            return answer;
 
             /// mode가 0일 때
             /// - code[idx]가 "1"이 아니면 idx가 짝수일 때만 ret의 맨 뒤에 code[idx]를 추가합니다.
@@ -101,8 +124,6 @@
             /// - code[idx]가 "1"이 아니면 idx가 홀수일 때만 ret의 맨 뒤에 code[idx]를 추가합니다.
             /// - code[idx]가 "1"이면 mode를 1에서 0으로 바꿉니다.
             //answer = answer + retOdd ;
-            answer = retEven + retOdd;
-            return answer;
         }
     }
 }
